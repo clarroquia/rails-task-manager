@@ -1,0 +1,13 @@
+<div class= "container d-flex flex-column justify-content-center">
+
+<h1>Tasks for Today</h1>
+
+<ul class="list-group">
+  <% @tasks.each do |task| %>
+  <li class="list-group-item">
+    <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+    <%= link_to task.title, task_path(task) %>
+  </li>
+  <% end %>
+</ul>
+</div>
